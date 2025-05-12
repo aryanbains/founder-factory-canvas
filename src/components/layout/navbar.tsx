@@ -12,6 +12,8 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/events", label: "Events" },
   { href: "/team", label: "Team" },
+  { href: "/initiatives", label: "Initiatives" },
+  { href: "/join", label: "Join" },
 ];
 
 export function Navbar() {
@@ -20,7 +22,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 32);
     };
     
     window.addEventListener("scroll", handleScroll);
@@ -31,11 +33,11 @@ export function Navbar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-onyx/80 backdrop-blur-lg shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-onyx/80 backdrop-blur-lg shadow-lg h-16 md:h-[64px]" : "bg-transparent h-14 md:h-[72px]"
       )}
     >
       <Container>
-        <nav className="flex items-center justify-between py-4">
+        <nav className="flex items-center justify-between h-full">
           <Link to="/" className="z-30">
             <Logo />
           </Link>
@@ -46,9 +48,10 @@ export function Navbar() {
               <Link
                 key={link.href}
                 to={link.href}
-                className="text-foreground/80 hover:text-foreground transition-colors duration-200"
+                className="text-foreground/80 hover:text-foreground transition-colors duration-200 relative group"
               >
                 {link.label}
+                <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-400 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"></span>
               </Link>
             ))}
           </div>
