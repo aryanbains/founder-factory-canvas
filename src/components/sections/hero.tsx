@@ -138,7 +138,7 @@ export function Hero() {
         duration: 2,
         ease: "easeInOut",
         repeat: Infinity,
-        repeatType: "loop"
+        repeatType: "loop" as const
       }
     }
   };
