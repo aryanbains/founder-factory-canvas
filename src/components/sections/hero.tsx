@@ -17,7 +17,7 @@ export function Hero() {
       opacity: 1,
       transition: { 
         duration: 0.8, 
-        staggerChildren: 0.1 
+        staggerChildren: 0.06 
       }
     }
   };
@@ -41,7 +41,7 @@ export function Hero() {
         <motion.div 
           className="absolute inset-0 z-0"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.4 }}
+          animate={{ opacity: 0.3 }}
           transition={{ duration: 1.8, delay: 0.2 }}
         >
           <Canvas camera={{ position: [0, 0, 2] }}>
@@ -64,7 +64,7 @@ export function Hero() {
         >
           {/* Headline */}
           <motion.h1 
-            className="text-5xl md:text-7xl lg:text-9xl font-semibold tracking-[-0.04em] mb-6"
+            className="text-5xl md:text-7xl lg:text-9xl font-semibold tracking-[-0.02em] leading-[0.9] mb-6"
             variants={itemVariants}
           >
             {prefersReducedMotion ? (
@@ -73,9 +73,9 @@ export function Hero() {
               <>
                 <AnimatedWord text="THE" delay={0.1} />
                 {' '}
-                <AnimatedWord text="FOUNDER" delay={0.3} />
+                <AnimatedWord text="FOUNDER" delay={0.16} />
                 {' '}
-                <AnimatedWord text="FACTORY" delay={0.5} />
+                <AnimatedWord text="FACTORY" delay={0.22} />
               </>
             )}
           </motion.h1>
@@ -84,9 +84,6 @@ export function Hero() {
           <motion.p
             className="text-xl md:text-2xl text-foreground/80 max-w-2xl mx-auto mb-12"
             variants={itemVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 0.8 }}
           >
             Brains behind bots. Vision behind ventures.
           </motion.p>

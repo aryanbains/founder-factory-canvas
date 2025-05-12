@@ -33,7 +33,9 @@ export function Navbar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-onyx/80 backdrop-blur-lg shadow-lg h-16 md:h-[64px]" : "bg-transparent h-14 md:h-[72px]"
+        isScrolled 
+          ? "bg-onyx/80 backdrop-blur-lg shadow-lg h-16 md:h-[64px]" 
+          : "bg-transparent h-20 md:h-[72px]"
       )}
     >
       <Container>
@@ -43,7 +45,7 @@ export function Navbar() {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 pr-14">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

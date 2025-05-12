@@ -29,13 +29,21 @@ export function EventCard({
   onClick
 }: EventCardProps) {
   const formattedDate = format(new Date(date), 'MMM dd, yyyy');
+  
+  // Function to convert to Title Case
+  const toTitleCase = (str: string) => {
+    return str.replace(
+      /\w\S*/g,
+      (txt) => txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase()
+    );
+  };
 
   return (
     <motion.div 
       className="h-full"
       animate={{
         opacity: isActive ? 1 : 0.8,
-        scale: isActive ? 1.05 : 1
+        scale: isActive ? 1.05 : 0.94
       }}
       transition={{
         duration: 0.3,
@@ -72,7 +80,7 @@ export function EventCard({
                 key={i}
                 className="text-xs bg-electric/10 text-electric px-2 py-1 rounded-full"
               >
-                {tag}
+                {toTitleCase(tag)}
               </span>
             ))}
           </div>

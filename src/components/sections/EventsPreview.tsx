@@ -1,5 +1,5 @@
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -15,6 +15,24 @@ export function EventsPreview() {
   const { scrollXProgress } = useScroll({
     container: containerRef
   });
+  
+  // Handle mouse wheel horizontal scroll
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    
+    const handleWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaX) < Math.abs(e.deltaY) && e.deltaY !== 0) {
+        e.preventDefault();
+        container.scrollLeft += e.deltaY;
+      }
+    };
+    
+    container.addEventListener('wheel', handleWheel, { passive: false });
+    return () => {
+      container.removeEventListener('wheel', handleWheel);
+    };
+  }, []);
   
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'ArrowRight') {
@@ -47,15 +65,17 @@ export function EventsPreview() {
       <Container>
         <div className="flex justify-between items-center mb-12">
           <div>
-            <h2 className="text-4xl font-bold">Upcoming Events</h2>
+            <h2 className="text-4xl font-semibold">Upcoming Events</h2>
             <p className="text-foreground/70 mt-2">Join our workshops, hackathons, and meetups</p>
           </div>
           
           <Link to="/events">
-            <Button variant="outline" className="gap-2">
-              View All
-              <ArrowRight size={16} />
-            </Button>
+            <div className="group">
+              <Button variant="outline" className="gap-2 group-hover:gap-3 transition-all duration-300">
+                View All
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+            </div>
           </Link>
         </div>
       </Container>
@@ -75,6 +95,7 @@ export function EventsPreview() {
               key={event.slug}
               className="w-[350px] min-w-[350px] snap-center event-card"
               onFocus={() => onCardVisible(i)}
+              onMouseEnter={() => onCardVisible(i)}
               tabIndex={0}
             >
               <EventCard
@@ -89,9 +110,10 @@ export function EventsPreview() {
       
       <Container>
         <div className="flex justify-center mt-8">
-          <Link to="/events" className="inline-flex">
-            <Button className="bg-electric hover:bg-electric/90">
+          <Link to="/events" className="inline-flex group">
+            <Button className="bg-electric hover:bg-electric/90 gap-2 group-hover:gap-3 transition-all duration-300">
               View All Events
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
           </Link>
         </div>

@@ -43,6 +43,7 @@ export function ParticleField() {
         sizeAttenuation={true}
         depthWrite={false}
         blending={THREE.AdditiveBlending}
+        opacity={0.6}
       />
     </Points>
   );

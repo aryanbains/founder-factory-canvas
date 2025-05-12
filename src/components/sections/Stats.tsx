@@ -54,7 +54,7 @@ const StatItem = ({
   return (
     <motion.div 
       ref={ref}
-      className="flex flex-col items-center p-6 bg-onyx border border-white/6 rounded-xl"
+      className="flex flex-col items-center p-6 bg-onyx border border-white/8 rounded-xl shadow-[inset_0_1px_2px_rgba(255,255,255,0.08)]"
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -68,6 +68,8 @@ const StatItem = ({
 };
 
 export function Stats() {
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  
   return (
     <section className="py-24 bg-gradient-to-b from-carbon/30 to-onyx">
       <Container>
@@ -75,25 +77,25 @@ export function Stats() {
           Impact in Numbers
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-6 lg:gap-8">
           <StatItem 
-            value={2300} 
+            value={prefersReducedMotion ? 2300 : 0}
             label="Hours of Mentorship" 
             suffix="+"
           />
           <StatItem 
-            value={47} 
+            value={prefersReducedMotion ? 47 : 0}
             label="Cr Combined Revenue Generated" 
             prefix="₹" 
             suffix=" Cr"
           />
           <StatItem 
-            value={120} 
+            value={prefersReducedMotion ? 120 : 0}
             label="Startup Ideas Incubated" 
             suffix="+"
           />
           <StatItem 
-            value={27} 
+            value={prefersReducedMotion ? 27 : 0}
             label="Industry-Backed Workshops"
           />
           <StatItem 

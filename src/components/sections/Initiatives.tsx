@@ -16,9 +16,11 @@ const InitiativeCard = ({ icon, title, description, isActive }: InitiativeCardPr
     <motion.div
       className="w-full md:w-[320px] h-auto md:h-[440px] p-6 rounded-xl border border-white/6 backdrop-blur-sm flex flex-col gap-6"
       animate={{
-        opacity: isActive ? 1 : 0.4,
+        opacity: isActive ? 1 : 0,
         scale: isActive ? 1.04 : 1,
-        borderColor: isActive ? "rgba(255, 255, 255, 0.12)" : "rgba(255, 255, 255, 0.06)"
+        borderColor: isActive ? "rgba(255, 255, 255, 0.12)" : "rgba(255, 255, 255, 0.06)",
+        pointerEvents: isActive ? "auto" : "none",
+        boxShadow: isActive ? "0 8px 16px rgba(0, 0, 0, 0.12)" : "none"
       }}
       transition={{
         duration: 0.5,
@@ -121,12 +123,13 @@ export function Initiatives() {
                     style={{
                       opacity: useTransform(
                         activeIndex,
-                        i => i === i ? 1 : 0
+                        v => v === i ? 1 : 0
                       ),
                       y: useTransform(
                         activeIndex,
                         v => (v === i ? 0 : v < i ? -50 : 50)
                       ),
+                      pointerEvents: activeIndex.get() === i ? "auto" : "none"
                     }}
                   >
                     <InitiativeCard 
@@ -143,7 +146,7 @@ export function Initiatives() {
           
           <div className="w-full md:w-3/5 md:pl-12">
             <motion.h2
-              className="text-4xl md:text-6xl font-bold leading-tight"
+              className="text-4xl md:text-6xl font-bold leading-tight tracking-tight"
               style={{
                 opacity: useTransform(scrollYProgress, [0, 0.1], [0, 1]),
                 y: useTransform(scrollYProgress, [0, 0.1], [50, 0])

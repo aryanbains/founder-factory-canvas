@@ -35,7 +35,7 @@ export function HeroCTA({ delay = 1 }: HeroCTAProps) {
       </Button>
       <Button
         variant="outline"
-        className="border-white/20 hover:bg-white hover:text-black px-8 py-6 text-lg"
+        className="border-white/20 bg-transparent hover:bg-white hover:text-black px-8 py-6 text-lg"
         aria-label="View Upcoming Events"
       >
         Browse Events
