@@ -1,0 +1,8 @@
+
+# This directory contains SF Pro Display fonts
+# Due to licensing, you need to add the actual font files here:
+# - SF-Pro-Display-Regular.woff2
+# - SF-Pro-Display-Medium.woff2
+# - SF-Pro-Display-Bold.woff2
+
+# As a fallback, Inter font is loaded from Google Fonts
