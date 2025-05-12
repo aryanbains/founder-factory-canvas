@@ -1,0 +1,83 @@
+
+[
+  {
+    "id": "1",
+    "name": "Alex Richards",
+    "role": "Founder & President",
+    "photo": "/placeholder.svg",
+    "quote": "Building tomorrow, one failed prototype at a time.",
+    "socials": {
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://twitter.com",
+      "github": "https://github.com"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Sarah Chen",
+    "role": "AI R&D Lead",
+    "photo": "/placeholder.svg",
+    "quote": "The future is just a neural network away.",
+    "socials": {
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://twitter.com",
+      "github": "https://github.com"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Miguel Rodriguez",
+    "role": "Growth Lead",
+    "photo": "/placeholder.svg",
+    "quote": "Scaling ideas from zero to one million users.",
+    "socials": {
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://twitter.com",
+      "github": "https://github.com"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Priya Sharma",
+    "role": "Engineering Director",
+    "photo": "/placeholder.svg",
+    "quote": "Code is poetry that solves real problems.",
+    "socials": {
+      "linkedin": "https://linkedin.com",
+      "github": "https://github.com"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Jordan Taylor",
+    "role": "Design Lead",
+    "photo": "/placeholder.svg",
+    "quote": "Creating experiences that inspire and transform.",
+    "socials": {
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://twitter.com"
+    }
+  },
+  {
+    "id": "6",
+    "name": "Olivia Washington",
+    "role": "Operations Director",
+    "photo": "/placeholder.svg",
+    "quote": "Systems thinking turns chaos into opportunity.",
+    "socials": {
+      "linkedin": "https://linkedin.com",
+      "github": "https://github.com"
+    }
+  },
+  {
+    "id": "7",
+    "name": "Kai Nakamura",
+    "role": "Startup Mentor",
+    "photo": "/placeholder.svg",
+    "quote": "Failure isn't the end. It's the beginning of wisdom.",
+    "socials": {
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://twitter.com"
+    }
+  }
+]
