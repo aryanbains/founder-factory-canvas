@@ -2,8 +2,8 @@
 [
   {
     "id": "1",
-    "name": "Alex Richards",
-    "role": "Founder & President",
+    "name": "Aryan Bains",
+    "role": "Core Member",
     "photo": "/placeholder.svg",
     "quote": "Building tomorrow, one failed prototype at a time.",
     "socials": {
@@ -14,8 +14,8 @@
   },
   {
     "id": "2",
-    "name": "Sarah Chen",
-    "role": "AI R&D Lead",
+    "name": "Anmol Singh",
+    "role": "Core Member",
     "photo": "/placeholder.svg",
     "quote": "The future is just a neural network away.",
     "socials": {
@@ -26,8 +26,8 @@
   },
   {
     "id": "3",
-    "name": "Miguel Rodriguez",
-    "role": "Growth Lead",
+    "name": "Damanjeet Singh",
+    "role": "Core Member",
     "photo": "/placeholder.svg",
     "quote": "Scaling ideas from zero to one million users.",
     "socials": {
@@ -38,8 +38,8 @@
   },
   {
     "id": "4",
-    "name": "Priya Sharma",
-    "role": "Engineering Director",
+    "name": "Yuvraj",
+    "role": "Core Member",
     "photo": "/placeholder.svg",
     "quote": "Code is poetry that solves real problems.",
     "socials": {
@@ -49,8 +49,8 @@
   },
   {
     "id": "5",
-    "name": "Jordan Taylor",
-    "role": "Design Lead",
+    "name": "Harsimar Kaur",
+    "role": "Core Member",
     "photo": "/placeholder.svg",
     "quote": "Creating experiences that inspire and transform.",
     "socials": {
@@ -60,8 +60,8 @@
   },
   {
     "id": "6",
-    "name": "Olivia Washington",
-    "role": "Operations Director",
+    "name": "Jivika Chawla",
+    "role": "Core Member",
     "photo": "/placeholder.svg",
     "quote": "Systems thinking turns chaos into opportunity.",
     "socials": {
@@ -71,8 +71,8 @@
   },
   {
     "id": "7",
-    "name": "Kai Nakamura",
-    "role": "Startup Mentor",
+    "name": "Nandini Gupta",
+    "role": "Core Member",
     "photo": "/placeholder.svg",
     "quote": "Failure isn't the end. It's the beginning of wisdom.",
     "socials": {
