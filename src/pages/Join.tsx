@@ -109,7 +109,7 @@ export default function Join() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-onyx via-carbon to-onyx">
+      <div className="min-h-screen bg-black">
         {/* Hero Section */}
         <section className="pt-32 pb-16">
           <Container>
