@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -18,15 +18,35 @@ const navLinks = [
 export function Navbar() {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const { isMenuOpen, setMenuOpen } = useAppStore();
+	const [scrollPosition, setScrollPosition] = useState(0);
 
 	useEffect(() => {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 32);
+			setScrollPosition(window.scrollY);
 		};
 
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
+	
+	// Lock body scroll when menu is open
+	useEffect(() => {
+		if (isMenuOpen) {
+			// Save current scroll position and lock the body
+			document.body.style.overflow = 'hidden';
+			document.body.style.position = 'fixed';
+			document.body.style.top = `-${scrollPosition}px`;
+			document.body.style.width = '100%';
+		} else {
+			// Restore scroll position when menu is closed
+			document.body.style.overflow = '';
+			document.body.style.position = '';
+			document.body.style.top = '';
+			document.body.style.width = '';
+			window.scrollTo(0, scrollPosition);
+		}
+	}, [isMenuOpen, scrollPosition]);
 
 	return (
 		<header
@@ -72,11 +92,11 @@ export function Navbar() {
 			<AnimatePresence>
 				{isMenuOpen && (
 					<motion.div
-						initial={{ opacity: 0, y: -20 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0, y: -20 }}
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
 						transition={{ duration: 0.3 }}
-						className="fixed inset-0 z-20 bg-onyx"
+						className="fixed inset-0 z-20 bg-onyx overflow-auto"
 					>
 						<Container className="h-full flex items-center justify-center">
 							<div className="flex flex-col items-center space-y-8">
