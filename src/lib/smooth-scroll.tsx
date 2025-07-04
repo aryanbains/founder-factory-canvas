@@ -15,11 +15,12 @@ export const SmoothScrollProvider: React.FC<{ children: React.ReactNode }> = ({ 
 
   useEffect(() => {
     const lenisInstance = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      duration: 0.35, // even more responsive
+      easing: t => t, // linear easing for instant response
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
+      wheelMultiplier: 1.7,
       touchMultiplier: 2,
     });
 
