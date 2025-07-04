@@ -4,31 +4,31 @@
     "id": "1",
     "name": "Aryan Bains",
     "role": "Core Member",
-    "photo": "/placeholder.svg",
+    "photo": "/aryan.jpg",
     "quote": "Building tomorrow, one failed prototype at a time.",
     "socials": {
-      "linkedin": "https://linkedin.com",
-      "twitter": "https://twitter.com",
-      "github": "https://github.com"
+      "linkedin": "https://www.linkedin.com/in/aryanbains",
+      "twitter": "https://x.com/AryanBains2",
+      "github": "https://github.com/aryanbains"
     }
   },
   {
     "id": "2",
     "name": "Anmol Singh",
     "role": "Core Member",
-    "photo": "/placeholder.svg",
+    "photo": "/anmol.jpg",
     "quote": "The future is just a neural network away.",
     "socials": {
-      "linkedin": "https://linkedin.com",
+      "linkedin": "https://www.linkedin.com/in/anmol-singh-900942238/",
       "twitter": "https://twitter.com",
-      "github": "https://github.com"
+      "github": "https://github.com/SardarAnmolsingh"
     }
   },
   {
     "id": "3",
     "name": "Damanjeet Singh",
     "role": "Core Member",
-    "photo": "/placeholder.svg",
+    "photo": "/daman.jpg",
     "quote": "Scaling ideas from zero to one million users.",
     "socials": {
       "linkedin": "https://linkedin.com",
@@ -40,43 +40,45 @@
     "id": "4",
     "name": "Yuvraj",
     "role": "Core Member",
-    "photo": "/placeholder.svg",
+    "photo": "/yuvraj.jpg",
     "quote": "Code is poetry that solves real problems.",
     "socials": {
-      "linkedin": "https://linkedin.com",
-      "github": "https://github.com"
+      "linkedin":"https://www.linkedin.com/in/yuvraj-malgat-804607253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "github":"https://github.com/YuvrajBHEEL"
     }
   },
   {
     "id": "5",
     "name": "Harsimar Kaur",
     "role": "Core Member",
-    "photo": "/placeholder.svg",
+    "photo": "/harsimar.jpg",
     "quote": "Creating experiences that inspire and transform.",
     "socials": {
-      "linkedin": "https://linkedin.com",
-      "twitter": "https://twitter.com"
+      "linkedin": "https://www.linkedin.com/in/harsimar-kaur-946920280/",
+      "twitter": "",
+      "github":""
     }
   },
   {
     "id": "6",
     "name": "Jivika Chawla",
     "role": "Core Member",
-    "photo": "/placeholder.svg",
+    "photo": "/jivika.jpg",
     "quote": "Systems thinking turns chaos into opportunity.",
     "socials": {
-      "linkedin": "https://linkedin.com",
-      "github": "https://github.com"
+      "linkedin": "https://www.linkedin.com/in/jivika-chawla-926376319/",
+      "twitter": "https://x.com/jivikach77",
+      "github":  "https://github.com/jivikach27"
     }
   },
   {
     "id": "7",
     "name": "Nandini Gupta",
     "role": "Core Member",
-    "photo": "/placeholder.svg",
+    "photo": "/nandini.jpg",
     "quote": "Failure isn't the end. It's the beginning of wisdom.",
     "socials": {
-      "linkedin": "https://linkedin.com",
+      "linkedin": "www.linkedin.com/in/nandini-gupta-5976a1291",
       "twitter": "https://twitter.com"
     }
   }

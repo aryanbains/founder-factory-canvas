@@ -79,23 +79,22 @@ export function Stats() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-6 lg:gap-8">
           <StatItem 
-            value={prefersReducedMotion ? 2300 : 0}
+            value={prefersReducedMotion ? 2300 : 20}
             label="Hours of Mentorship" 
             suffix="+"
           />
           <StatItem 
-            value={prefersReducedMotion ? 47 : 0}
-            label="Cr Combined Revenue Generated" 
-            prefix="₹" 
-            suffix=" Cr"
-          />
-          <StatItem 
-            value={prefersReducedMotion ? 120 : 0}
+            value={prefersReducedMotion ? 120 : 2}
             label="Startup Ideas Incubated" 
             suffix="+"
           />
           <StatItem 
-            value={prefersReducedMotion ? 27 : 0}
+            value={prefersReducedMotion ? 120 : 500}
+            label="Young Minds Accomodated" 
+            suffix="+"
+          />
+          <StatItem 
+            value={prefersReducedMotion ? 27 : 2}
             label="Industry-Backed Workshops"
           />
           <StatItem 

@@ -184,9 +184,9 @@ const Events = () => {
                           
                           <div className="flex items-center gap-3 mb-8">
                             <MapPin className="w-4 h-4 text-foreground/50" />
-                            <span className="text-foreground/60">Bangalore, India</span>
+                            <span className="text-foreground/60">Delhi, India</span>
                             <Users className="w-4 h-4 text-foreground/50 ml-4" />
-                            <span className="text-foreground/60">50+ Attendees</span>
+                            <span className="text-foreground/60">500+ Attendees</span>
                           </div>
                           
                           <div className="flex flex-wrap gap-2 mb-8">
